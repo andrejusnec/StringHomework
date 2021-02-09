@@ -53,9 +53,17 @@ echo "3. $str3 <br>";
 echo "4. $str4 <br>";
 //Task8
 echo '<br><br>Task8<br><br>';
-$astuntasStr = 'Star Wars: Episode '.str_repeat(' ', rand(0,5)). rand(1,9) . ' - A New Hope';
+$astuntasStr = 'Star Wars: Episode '.str_repeat(' ', rand(0,5)). rand(10,90) . ' - A New Hope';
 echo $astuntasStr.'<br>';
-$episodeNr = (int) filter_var($astuntasStr, FILTER_SANITIZE_NUMBER_INT); //pasiklausti kaip veikia
+//$episodeNr = (int) filter_var($astuntasStr, FILTER_SANITIZE_NUMBER_INT); //pasiklausti kokia yra alternatyva
+//filtro funkcija,kuri pasalina is stringo viska isskirus skaicius,pliusus ir minusus
+//uzrasau int kad ziuretu kaip i skaiciu(be minuso ir +)
+$episodeNr = '';
+for($i = 0; $i < strlen($astuntasStr);$i++) {
+    if(is_numeric($astuntasStr[$i])) {
+        $episodeNr .= $astuntasStr[$i];
+    }
+}
 echo $episodeNr;
 //Task9
 echo '<br><br>Task9<br><br>';
