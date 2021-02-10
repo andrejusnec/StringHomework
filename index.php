@@ -2,7 +2,7 @@
 echo '<h1>Namu darbai su String</h1>';
 //Task1
 echo '<br><br>Task1<br><br>';
-$vardas = 'Johhny';
+$vardas = 'Johnny';
 $pavarde = 'Depp';
 if(strlen($vardas) < strlen($pavarde)) {
     echo $vardas;
@@ -23,7 +23,7 @@ echo '<br><br>Task3<br><br>';
  echo $treciasStr;
  //Task4
 echo '<br><br>Task4<br><br>';
-    $ketvirtasStr = substr($vardas, (strlen($vardas)-3), strlen($vardas));  // 10
+    $ketvirtasStr = substr($vardas, (strlen($vardas)-3), strlen($vardas));  // 
     $ketvirtasStr .= substr($pavarde, (strlen($pavarde)-3), strlen($pavarde));
     echo $ketvirtasStr;
  //Task5
